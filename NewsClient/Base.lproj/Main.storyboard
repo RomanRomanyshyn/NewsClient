@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeView" id="BYZ-38-t0r" customClass="HomeView" customModule="NewsClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mc8-rX-4G3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mc8-rX-4G3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="POc-rB-yR7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mc8-rX-4G3" secondAttribute="trailing" id="T3A-GP-9J0"/>
+                            <constraint firstItem="Mc8-rX-4G3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZYg-Rd-bhu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mc8-rX-4G3" secondAttribute="bottom" id="rzF-O3-vJF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KDb-R1-2db"/>
+                    <connections>
+                        <outlet property="tableView" destination="Mc8-rX-4G3" id="qen-Ve-Zeg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889.8550724637682" y="107.8125"/>
+        </scene>
+        <!--Favourites View-->
+        <scene sceneID="i9p-yt-v82">
+            <objects>
+                <viewController storyboardIdentifier="FavouritesView" id="SGd-Fg-pZB" customClass="FavouritesView" customModule="NewsClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qX3-JE-KMQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="znp-h7-tsQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is no any liked articles!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srQ-lS-E4t">
+                                <rect key="frame" x="16" y="443" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k56-eC-SjS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="srQ-lS-E4t" firstAttribute="leading" secondItem="k56-eC-SjS" secondAttribute="leading" constant="16" id="0Jr-91-UNn"/>
+                            <constraint firstItem="k56-eC-SjS" firstAttribute="trailing" secondItem="znp-h7-tsQ" secondAttribute="trailing" id="3bH-5c-SD3"/>
+                            <constraint firstItem="k56-eC-SjS" firstAttribute="bottom" secondItem="znp-h7-tsQ" secondAttribute="bottom" id="8zC-8O-veg"/>
+                            <constraint firstItem="znp-h7-tsQ" firstAttribute="top" secondItem="k56-eC-SjS" secondAttribute="top" id="PEB-Nc-dCv"/>
+                            <constraint firstItem="srQ-lS-E4t" firstAttribute="centerX" secondItem="k56-eC-SjS" secondAttribute="centerX" id="VkV-G4-qfu"/>
+                            <constraint firstItem="znp-h7-tsQ" firstAttribute="leading" secondItem="k56-eC-SjS" secondAttribute="leading" id="dPn-Mq-Ixn"/>
+                            <constraint firstItem="srQ-lS-E4t" firstAttribute="centerY" secondItem="k56-eC-SjS" secondAttribute="centerY" id="dbq-j4-YR6"/>
+                            <constraint firstItem="k56-eC-SjS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="srQ-lS-E4t" secondAttribute="trailing" constant="16" id="vF9-y8-T4m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="placeholderView" destination="srQ-lS-E4t" id="CfF-zS-VNa"/>
+                        <outlet property="tableView" destination="znp-h7-tsQ" id="qUq-Sh-6ZT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sa7-di-00Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2807" y="108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
